@@ -11,7 +11,7 @@ body {
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 480px) {
     #hometext {
         font-size: 4rem;
     }
