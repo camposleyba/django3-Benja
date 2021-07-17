@@ -17,7 +17,7 @@
     <hr>
     {% for video in videos %}
     <video controls preload="metadata" width="800" height="500">
-      <source src="{{ video.video.url}}" type='video/mp4'></source>
+      <source src="{ static 'benja\WhatsApp_Video_2021-07-15_at_20.57.52.mp4' }" type='video/mp4'></source>
     </video>
       <h3 class="font-weight-bold mt-3">{{ video.title }}</h3>
       <p>{{ video.description }}</p>
