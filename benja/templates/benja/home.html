@@ -16,7 +16,7 @@
     <!--<img src="{% static 'benja/WhatsApp Image 2021-07-16 at 13.48.05.jpeg' %}" width="200" height="200">-->
     <hr>
     {% for video in videos %}
-    <video controls autoplay loop muted playsinline src="{{ video.video.url }}">
+    <video controls preload="metadata">
       <source src="{{ video.video.url }}" type='video/mp4'></source>
     </video>
       <h3 class="font-weight-bold mt-3">{{ video.title }}</h3>
