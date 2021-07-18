@@ -46,6 +46,13 @@
     {% endfor %}
     </div>
   </div>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <form method="POST" action="{% url 'semana6' %}">
+      {% csrf_token %}
+      <button class="btn btn-info" type="submit">6 semanas --></button>
+    </form>
+  </div>
+
 </div>
 
 
