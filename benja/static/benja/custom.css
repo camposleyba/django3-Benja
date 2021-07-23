@@ -10,6 +10,13 @@ body {
     font-family:'IBM Plex Sans', sans-serif;
 }
 
+$headings-margin-bottom:      $spacer * .5;
+$headings-font-family:        null;
+$headings-font-style:         null;
+$headings-font-weight:        500;
+$headings-line-height:        1.2;
+$headings-color:              null;
+
 @viewport {
   width: device-width ;
   zoom: 1.0 ;
