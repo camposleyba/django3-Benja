@@ -5,13 +5,14 @@
 {% block content %}
 
 <div class="container-fluid">
-  <div class="row justify-content-center my-3">
+  <div class="row justify-content-start my-3">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
     <h1 class="display-2 text-dark">Bienvenido(a) Benja/Juana</h1>
   </div>
 </div>
 <div class="container-fluid">
-  <div class="row justify-content-center mb-3">
-    <div class="col-md-9 text-center">
+  <div class="row justify-content-start my-3">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
       <h3 class="font-weight-bold">Segunda Eco:
         <small class="text-muted">{{ fecha|date:'d M y' }}</small>
       </h3>
@@ -21,8 +22,8 @@
   </div>
 </div>
 <div class="container-fluid">
-  <div class="row justify-content-center mb-3">
-    <div class="col-md-9 text-center">
+  <div class="row justify-content-start my-3">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
     {% for video in videos %}
     <video class="img-responsive-upscale ng-scope" controls width="800" height="500">
       <source src="https://github.com/camposleyba/django3-Benja/blob/master/media/benja/videos/WhatsApp_Video_2021-07-22_at_23.25.38.mp4?raw=true" type='video/mp4'></source>
@@ -36,8 +37,8 @@
   </div>
 </div>
 <div class="container-fluid">
-  <div class="row justify-content-center mb-3">
-    <div class="col-md-9 text-center">
+  <div class="row justify-content-start my-3">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
   <br>
   {% for foto in fotos %}
   <img src="{{ foto.image.url }}" width="800" height="500">
