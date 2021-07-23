@@ -20,12 +20,12 @@
     </div>
   </div>
 </div>
-<!--<div class="container-fluid">
+<div class="container-fluid">
   <div class="row justify-content-center mb-3">
     <div class="col-md-9 text-center">
     {% for video in videos %}
     <video class="img-responsive-upscale ng-scope" controls width="800" height="500">
-      <source src="https://github.com/camposleyba/django3-Benja/blob/master/media/benja/videos/WhatsApp_Video_2021-07-15_at_20.57.52.mp4?raw=true" type='video/mp4'></source>
+      <source src="{{ video.video.url }}" type='video/mp4'></source>
     </video>
       <h3 class="font-weight-bold mt-3">{{ video.title }}</h3>
       <p>{{ video.description }}</p>
@@ -47,14 +47,18 @@
     {% endfor %}
     </div>
   </div>
-  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <form method="POST" action="{% url 'semana6' %}">
+  <div class="d-flex justify-content-around">
+    <form method="GET" action="{% url 'home' %}">
       {% csrf_token %}
-      <button class="btn btn-success" type="submit">6 semanas</button>
+      <button class="btn btn-success" type="submit">5 semanas</button>
+    </form>
+    <form method="GET" action="{% url 'semana11' %}">
+      {% csrf_token %}
+      <button class="btn btn-success" type="submit">11 semanas</button>
     </form>
   </div>
 
-</div>-->
+</div>
 
 
 
