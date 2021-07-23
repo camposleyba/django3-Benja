@@ -26,7 +26,7 @@
   <div class="d-flex justify-content-start mb-3">
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
     {% for video in videos %}
-    <video class="img-responsive-upscale ng-scope" controls width="800" height="500">
+    <video class="img-fluid" controls width="800" height="500">
       <source src="https://github.com/camposleyba/django3-Benja/blob/master/media/benja/videos/WhatsApp_Video_2021-07-15_at_20.57.52.mp4?raw=true" type='video/mp4'></source>
     </video>
       <h3 class="font-weight-bold mt-3">{{ video.title }}</h3>
@@ -42,7 +42,7 @@
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
   <br>
   {% for foto in fotos %}
-  <img src="{{ foto.image.url }}" width="800" height="500">
+  <img src="{{ foto.image.url }}" class="img-fluid" width="800" height="500">
     <h3 class="font-weight-bold mt-3">{{ foto.title }}</h3>
     <p>{{ foto.description }}</p>
     {% endfor %}
