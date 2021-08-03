@@ -18,9 +18,17 @@ def semana6(request):
         videos = Video.objects.filter(week="semana 6")
         return render(request, 'benja/6semanas.html', {'fotos':fotos, 'fecha':fecha, 'videos':videos})
 
-def semana11(request):
+def semana8(request):
     if request.method == "GET":
-        fecha = datetime.date(2021,8,15)
-        fotos = Foto.objects.filter(week="semana 11")
-        videos = Video.objects.filter(week="semana 11")
-        return render(request, 'benja/11semanas.html', {'fotos':fotos, 'fecha':fecha, 'videos':videos})
+        fecha = datetime.date(2021,8,3)
+        fotos = Foto.objects.filter(week="semana 8")
+        videos = Video.objects.filter(week="semana 8")
+        return render(request, 'benja/8semanas.html', {'fotos':fotos, 'fecha':fecha, 'videos':videos})
+
+
+def semana12(request):
+    if request.method == "GET":
+        fecha = datetime.date(2021,8,18)
+        fotos = Foto.objects.filter(week="semana 12")
+        videos = Video.objects.filter(week="semana 12")
+        return render(request, 'benja/12semanas.html', {'fotos':fotos, 'fecha':fecha, 'videos':videos})
