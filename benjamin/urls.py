@@ -25,6 +25,7 @@ urlpatterns = [
     path('semana6/', views.semana6, name="semana6"),
     path('semana8/', views.semana8, name="semana8"),
     path('semana12/', views.semana12, name="semana12"),
+    path('semana16/', views.semana16, name="semana16"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

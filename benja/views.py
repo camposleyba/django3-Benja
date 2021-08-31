@@ -28,7 +28,14 @@ def semana8(request):
 
 def semana12(request):
     if request.method == "GET":
-        fecha = datetime.date(2021,8,18)
+        fecha = datetime.date(2021,8,31)
         fotos = Foto.objects.filter(week="semana 12")
         videos = Video.objects.filter(week="semana 12")
         return render(request, 'benja/12semanas.html', {'fotos':fotos, 'fecha':fecha, 'videos':videos})
+
+def semana16(request):
+    if request.method == "GET":
+        fecha = datetime.date(2021,8,31)
+        fotos = Foto.objects.filter(week="semana 16")
+        videos = Video.objects.filter(week="semana 16")
+        return render(request, 'benja/16semanas.html', {'fotos':fotos, 'fecha':fecha, 'videos':videos})

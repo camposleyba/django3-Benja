@@ -7,16 +7,61 @@
 <div class="container-fluid">
   <div class="d-flex justify-content-center my-3">
     <div class="col-md-8 text-center">
-        <h1 class="display-4 text-danger">Próximamente</h1>
+    <h1 class="display-4 text-dark">Bienvenido(a) Benja/Juana</h1>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="d-flex justify-content-center mb-3">
+    <div class="col-md-8 text-center">
+      <h3 class="font-weight-bold">NT Plus:
+        <small class="text-muted">{{ fecha|date:'d M y' }}</small>
+      </h3>
+
+      <hr>
     </div>
   </div>
 </div>
+<div class="container-fluid">
+  <div class="d-flex justify-content-center mb-3">
+    <div class="col-md-8 text-center">
+    {% for video in videos %}
+    <video class="img-fluid" controls width="800" height="500">
+      <source src="{{ video.video.url }}" type='video/mp4'></source>
+    </video>
+      <h3 class="font-weight-bold mt-3">{{ video.title }}</h3>
+      <p>{{ video.description }}</p>
 
-<div class="d-flex justify-content-around">
-  <form method="GET" action="{% url 'home' %}">
-    {% csrf_token %}
-    <button class="btn btn-success" type="submit">volver</button>
-  </form>
+    {% endfor %}
+    <hr>
+    </div>
+  </div>
 </div>
+<div class="container-fluid">
+  <div class="d-flex justify-content-center mb-3">
+    <div class="col-md-8 text-center">
+  <br>
+  {% for foto in fotos %}
+  <img src="{{ foto.image.url }}" class="img-fluid" width="800" height="500">
+
+    <h3 class="font-weight-bold mt-3">{{ foto.title }}</h3>
+    <p>{{ foto.description }}</p>
+    {% endfor %}
+    </div>
+  </div>
+  <div class="d-flex justify-content-around">
+    <form method="GET" action="{% url 'semana8' %}">
+      {% csrf_token %}
+      <button class="btn btn-success" type="submit">8 semanas</button>
+    </form>
+    <form method="GET" action="{% url 'semana16' %}">
+      {% csrf_token %}
+      <button class="btn btn-success" type="submit">16 semanas</button>
+    </form>
+  </div>
+
+</div>
+
+
+
 
 {% endblock %}
