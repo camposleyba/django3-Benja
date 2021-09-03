@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'benja/custom.css' %}">
-
+    <link rel="icon" type="image/png"  href="{% static 'benja/benja.png' %}">
     <title>Benjamin</title>
   </head>
   <body>
@@ -23,7 +23,9 @@
 
           <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #e3f2fd;">
           <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}"><h3>Home</h3></a>
+            <a class="navbar-brand" href="{% url 'home' %}">
+              <img src="{% static 'benja/benja.png' %}" width="30" height="30" class="d-inline-block align-top"> <b class="text-primary">Home</b>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
